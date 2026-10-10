@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 · 相册精灵</title>
+<style>
+  :root { --text: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --accent: #3686ee; --card: #f5f5f7; }
+  @media (prefers-color-scheme: dark) { :root { --text: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --accent: #5490e4; --card: #1c1c1e; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.7 -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 32px; margin: 0 0 4px; } h2 { font-size: 21px; margin-top: 36px; }
+  .muted { color: var(--muted); font-size: 15px; } a { color: var(--accent); }
+  .card { background: var(--card); border-radius: 14px; padding: 16px 20px; margin: 20px 0; }
+  li { margin: 6px 0; }
+</style>
+</head>
+<body>
+<main>
+  <p class="muted" style="text-align:right"><a href="en/privacy.html">English</a></p>
+  <h1>隐私政策</h1>
+  <p class="muted">相册精灵 · 生效日期：2026 年 10 月 11 日</p>
+
+  <div class="card">
+    <strong>一句话总结：</strong>照片的分析都在你的 iPhone 上完成，我们没有服务器，不收集、不出售任何数据。只有当你主动使用「助手」功能时，你的消息和照片的统计信息会用<strong>你自己的 API key 或账号</strong>直接发送给<strong>你选择的 AI 服务商</strong>。
+  </div>
+
+  <h2>1. 在设备上处理的数据</h2>
+  <p>为了给出整理建议，App 会在你的 iPhone 上读取照片库，并用 Apple 的 Vision 框架分析：</p>
+  <ul>
+    <li>照片的日期、位置、尺寸、是否收藏等元数据；</li>
+    <li>画质评分、内容标签（如「海滩」「猫」）、人脸数量和拍摄质量、镜头脏污程度；</li>
+    <li>截图和文档类照片中的文字、二维码和条形码内容。</li>
+  </ul>
+  <p>分析结果只保存在 App 的本地存储中，不会上传。照片位置会通过 Apple 地图服务转换成城市名（只发送坐标，不发送照片）。</p>
+
+  <h2>2. 语音输入</h2>
+  <p>在「助手」中使用语音时，App 会使用麦克风，并通过 iOS 自带的语音识别（Speech 框架的 SFSpeechRecognizer，与键盘听写相同）把语音转成文字。设备支持时识别在 iPhone 上完成；不支持时，iOS 会把音频发送给 Apple 识别，处理遵循 Apple 的隐私政策。<strong>本 App 自己不会保存录音，也不会把录音发给 Apple 以外的任何人</strong>。转出的文字和你打字输入的消息一样处理（见下一节）。朗读回复使用系统自带的语音合成，同样在设备上完成。</p>
+
+  <h2>3. 使用「助手」时发送的数据</h2>
+  <p>「助手」是可选功能，首次使用前会单独征求你的同意。使用时，以下内容会发送给你在设置中选择的 AI 服务商（如 Anthropic、OpenAI、Google、OpenRouter、DeepSeek）：</p>
+  <ul>
+    <li>你输入或用语音说出的消息（只发送识别后的文字）；</li>
+    <li>照片的统计信息，例如数量、日期、城市名、相册名；</li>
+    <li>助手需要读取文字时，在设备上识别出的文字；</li>
+    <li>助手需要确认画面时，少量缩小后的照片（最长边 512 像素）。</li>
+  </ul>
+  <p>这些请求使用你自己的 API key 或账号，从你的设备<strong>直接</strong>发送给服务商，不经过我们的服务器。服务商如何处理这些数据，请参阅你所选服务商的隐私政策。</p>
+  <p>如果你选择 OpenRouter 的免费模型（名称带「免费」标记），请注意：这些模型由不同的服务商提供，部分服务商可能会保存你的消息或用于训练模型，具体取决于你在 OpenRouter 网站上的隐私设置。请不要通过免费模型发送敏感内容。</p>
+  <p>如果你用 ChatGPT、GitHub Copilot、SuperGrok / X Premium、Kimi Code 或 Meta 的订阅账号登录，登录同样在 Apple 的安全网页窗口里完成，服务商发给本 App 的登录凭证保存在本机钥匙串里，只用来向该服务商发送助手的请求；本 App 看不到你的密码，你可以随时在 App 里退出登录。</p>
+  <p>如果你用 OpenRouter 账号登录，登录在 Apple 的安全网页窗口里完成，OpenRouter 会为本 App 生成一个 API key，保存在本机钥匙串里；本 App 看不到你的 OpenRouter 密码。你可以随时在 App 里退出登录，或在 OpenRouter 网站上撤销这个 key。</p>
+
+  <h2>4. API key</h2>
+  <p>你填写的 API key 保存在 iOS 钥匙串中，只用于向对应服务商发送请求。你可以随时在「设置」中移除。</p>
+
+  <h2>5. 我们不做的事</h2>
+  <ul>
+    <li>不运营任何服务器，不收集任何个人数据；</li>
+    <li>不使用广告、统计分析或追踪 SDK；</li>
+    <li>不出售、不共享你的数据；</li>
+    <li>不会在未经你确认的情况下修改或删除照片：所有删除和建相册操作都需要你在审核页确认，删除时 iOS 还会再次确认。</li>
+  </ul>
+
+  <h2>6. 删除数据</h2>
+  <p>在「设置 › 重新分析照片库」可以清除本地分析结果；卸载 App 会删除它在设备上保存的全部数据。已发送给 AI 服务商的数据，请联系对应服务商处理。</p>
+
+  <h2>7. 儿童</h2>
+  <p>本 App 不面向 13 岁以下儿童，也不会有意收集儿童的个人信息。</p>
+
+  <h2>8. 变更</h2>
+  <p>如果本政策有变更，我们会更新本页面并修改生效日期。</p>
+
+  <h2>9. 联系我们</h2>
+  <p>如有问题，请在 <a href="https://github.com/qiwihui/PhotoSprite/issues">GitHub Issues</a> 提交。</p>
+</main>
+</body>
+</html>

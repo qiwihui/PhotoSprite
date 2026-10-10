@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Photo Sprite</title>
+<style>
+  :root { --text: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --accent: #3686ee; --card: #f5f5f7; }
+  @media (prefers-color-scheme: dark) { :root { --text: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --accent: #5490e4; --card: #1c1c1e; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.7 -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 32px; margin: 0 0 4px; } h2 { font-size: 21px; margin-top: 36px; }
+  .muted { color: var(--muted); font-size: 15px; } a { color: var(--accent); }
+  .card { background: var(--card); border-radius: 14px; padding: 16px 20px; margin: 20px 0; }
+  li { margin: 6px 0; }
+</style>
+</head>
+<body>
+<main>
+  <p class="muted" style="text-align:right"><a href="../privacy.html">中文</a></p>
+  <h1>Privacy Policy</h1>
+  <p class="muted">Photo Sprite · Effective October 11, 2026</p>
+
+  <div class="card">
+    <strong>In short:</strong> Your photos are analyzed on your iPhone. We run no servers and don't collect or sell any data. Only when you choose to use the Assistant are your messages and statistics about your photos sent, with <strong>your own API key or account</strong>, directly to <strong>the AI provider you chose</strong>.
+  </div>
+
+  <h2>1. Data processed on your device</h2>
+  <p>To make suggestions, the app reads your photo library on your iPhone and analyzes it with Apple's Vision framework:</p>
+  <ul>
+    <li>metadata such as date, location, size and whether a photo is a favorite;</li>
+    <li>quality scores, content labels (like "beach" or "cat"), the number of faces and how well they were captured, and lens smudges;</li>
+    <li>text, QR codes and barcodes in screenshots and photos of documents.</li>
+  </ul>
+  <p>The results are stored only in the app's local storage and are never uploaded. Photo locations are turned into city names with Apple Maps (only coordinates are sent, never photos).</p>
+
+  <h2>2. Voice input</h2>
+  <p>When you use voice in the Assistant, the app uses the microphone and iOS's built-in speech recognition (SFSpeechRecognizer in the Speech framework, the same as keyboard dictation) to turn speech into text. Where the device supports it, recognition happens on your iPhone; otherwise iOS sends the audio to Apple for transcription, under Apple's privacy policy. <strong>The app itself never stores recordings or sends them to anyone other than Apple.</strong> The resulting text is handled like a typed message (see the next section). Replies are read aloud with the system's speech synthesis, also on the device.</p>
+
+  <h2>3. Data sent when you use the Assistant</h2>
+  <p>The Assistant is optional, and the app asks for your consent before its first use. When you use it, the following is sent to the AI provider you chose in Settings (such as Anthropic, OpenAI, Google, OpenRouter or DeepSeek):</p>
+  <ul>
+    <li>your typed or spoken messages (only the recognized text);</li>
+    <li>statistics about your photos, such as counts, dates, city names and album names;</li>
+    <li>text recognized on the device, when the Assistant needs to read it;</li>
+    <li>a few downsized photos (512 pixels on the longest side), when the Assistant needs to check what's in them.</li>
+  </ul>
+  <p>These requests use your own API key or account and go <strong>directly</strong> from your device to the provider, never through our servers. For how a provider handles this data, see that provider's privacy policy.</p>
+  <p>If you choose an OpenRouter free model (marked "Free"), note that these models are offered by various providers, some of which may store your messages or use them to train models, depending on your privacy settings on the OpenRouter website. Please don't send sensitive content through free models.</p>
+  <p>If you sign in with a ChatGPT, GitHub Copilot, SuperGrok / X Premium, Kimi Code or Meta subscription, sign-in happens in Apple's secure web sign-in sheet. The credentials the provider issues to the app are kept in this device's Keychain and are used only to send the Assistant's requests to that provider. The app never sees your password, and you can sign out in the app at any time.</p>
+  <p>If you sign in with OpenRouter, sign-in happens in Apple's secure web sign-in sheet and OpenRouter creates an API key for the app, kept in this device's Keychain. The app never sees your OpenRouter password. You can sign out in the app at any time, or revoke the key on the OpenRouter website.</p>
+
+  <h2>4. API keys</h2>
+  <p>API keys you enter are stored in the iOS Keychain and used only to send requests to that provider. You can remove them at any time in Settings.</p>
+
+  <h2>5. What we don't do</h2>
+  <ul>
+    <li>We run no servers and collect no personal data;</li>
+    <li>we use no ads, analytics or tracking SDKs;</li>
+    <li>we don't sell or share your data;</li>
+    <li>we never change or delete photos without your confirmation: every deletion and album is confirmed by you on a review screen, and iOS asks once more before deleting.</li>
+  </ul>
+
+  <h2>6. Deleting data</h2>
+  <p>Settings › Reanalyze Library clears the local analysis results; deleting the app removes everything it stored on the device. For data already sent to an AI provider, please contact that provider.</p>
+
+  <h2>7. Children</h2>
+  <p>The app is not directed at children under 13 and does not knowingly collect children's personal information.</p>
+
+  <h2>8. Changes</h2>
+  <p>If this policy changes, we'll update this page and its effective date.</p>
+
+  <h2>9. Contact</h2>
+  <p>For questions, please open an issue on <a href="https://github.com/qiwihui/PhotoSprite/issues">GitHub Issues</a>.</p>
+</main>
+</body>
+</html>

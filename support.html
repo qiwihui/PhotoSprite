@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技术支持 · 相册精灵</title>
+<style>
+  :root { --text: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --accent: #3686ee; --card: #f5f5f7; }
+  @media (prefers-color-scheme: dark) { :root { --text: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --accent: #5490e4; --card: #1c1c1e; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.7 -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 32px; margin: 0 0 4px; } h2 { font-size: 21px; margin-top: 36px; }
+  .muted { color: var(--muted); font-size: 15px; } a { color: var(--accent); }
+  details { background: var(--card); border-radius: 12px; padding: 12px 18px; margin: 10px 0; }
+  summary { font-weight: 600; cursor: pointer; }
+</style>
+</head>
+<body>
+<main>
+  <p class="muted" style="text-align:right"><a href="en/support.html">English</a></p>
+  <h1>技术支持</h1>
+  <p class="muted">相册精灵 · 遇到问题请在 <a href="https://github.com/qiwihui/PhotoSprite/issues">GitHub Issues</a> 提交，一般 2 个工作日内回复。</p>
+
+  <h2>快速上手</h2>
+  <ol>
+    <li><strong>首页</strong>：打开就有整理建议（相似照片、二维码截图、旧截图、拍糊的照片、大视频、每月精选、旅行相册），全部在 iPhone 上分析，免费。</li>
+    <li><strong>审核</strong>：点一条建议查看照片，取消不想处理的，再删除或存入相册。</li>
+    <li><strong>助手</strong>：点右下角的圆形按钮。在设置里登录 OpenRouter 或填入自己的 API key 后，用一句话描述需求，例如「今年去过哪些地方？每个地方挑 10 张最好的建相册」。</li>
+  </ol>
+  <p>App 里的「使用指南」（左下角问号）有更多示例，点一下就能试。</p>
+
+  <h2>常见问题</h2>
+  <details><summary>怎么用语音？</summary><p>在「助手」里点麦克风说话，停顿 2 秒自动发送，回复会读给你听。使用 iOS 自带的语音识别（和键盘听写相同），不需要下载模型：iPhone 支持时在设备上识别，否则由 Apple 的服务器识别。本 App 不会保存或上传录音。第一次使用会请求麦克风和语音识别权限。可以在「设置 › 语音」里调整；打开「连续对话」后，回复读完会自动接着听，8 秒没说话就结束。</p></details>
+  <details><summary>删错了怎么办？</summary><p>删除的照片在「照片」App 的「相簿 › 最近删除」里保留 30 天，可以恢复。</p></details>
+  <details><summary>照片会上传吗？</summary><p>不会。分析都在 iPhone 上完成。只有使用助手时，消息和照片统计信息会发给你选择的 AI 服务商，详见<a href="privacy.html">隐私政策</a>。</p></details>
+  <details><summary>为什么第一次要分析很久？</summary><p>需要逐张分析画质、人脸、内容和文字。几千张照片可能要十几分钟，分析期间可以正常使用；接上电源时 App 会在后台继续。</p></details>
+  <details><summary>只能访问部分照片？</summary><p>如果授权时选了「限制访问」，建议只覆盖你允许的照片。可以在首页顶部点「选择更多照片」，或在「设置 › 隐私与安全性 › 照片」里改为完全访问。</p></details>
+  <details><summary>助手要花多少钱？去哪里拿 API key？</summary><p>费用由 AI 服务商按用量直接收取，默认使用便宜的小模型，一次整理通常只要几分钱。API key 可以在 platform.claude.com（Anthropic）、platform.openai.com/api-keys（OpenAI）、aistudio.google.com/apikey（Google）、openrouter.ai/keys、platform.deepseek.com/api_keys 创建。</p></details>
+  <details><summary>能免费用助手吗？</summary><p>可以用 OpenRouter 的官方免费模型：在设置里选 OpenRouter，点「使用 OpenRouter 账号登录」（注册免费；也可以粘贴自己创建的 key），再点「改用免费模型」。限制为每分钟 20 次、每天 50 次（累计充值满 $10 后每天 1000 次）；部分免费模型的服务商可能保存或用你的消息训练模型，取决于你在 OpenRouter 的隐私设置。</p></details>
+  <details><summary>能用订阅账号登录吗？</summary><p>可以用 ChatGPT、GitHub Copilot、SuperGrok / X Premium、Kimi Code、Meta 的账号直接登录，请求计入你的订阅额度；也可以用 OpenRouter 账号登录。Claude Pro/Max 不支持：Anthropic 只允许在 Claude 自己的 App 和 Claude Code 里使用订阅登录，想用 Claude 请填 Anthropic API key，或通过 OpenRouter 使用。</p></details>
+  <details><summary>某张照片一直被建议删除？</summary><p>在审核页取消选择后再执行，以后同类建议就不会再推荐它。</p></details>
+
+  <h2>反馈</h2>
+  <p>欢迎把问题、截图和建议提交到 <a href="https://github.com/qiwihui/PhotoSprite/issues">GitHub Issues</a>。请注明 iOS 版本和 App 版本（设置 › 关于）。</p>
+  <p class="muted"><a href="privacy.html">隐私政策</a></p>
+</main>
+</body>
+</html>

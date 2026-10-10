@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Photo Sprite</title>
+<style>
+  :root { --text: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --accent: #3686ee; --card: #f5f5f7; }
+  @media (prefers-color-scheme: dark) { :root { --text: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --accent: #5490e4; --card: #1c1c1e; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.7 -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 32px; margin: 0 0 4px; } h2 { font-size: 21px; margin-top: 36px; }
+  .muted { color: var(--muted); font-size: 15px; } a { color: var(--accent); }
+  .card { background: var(--card); border-radius: 14px; padding: 16px 20px; margin: 20px 0; }
+  li { margin: 6px 0; }
+</style>
+</head>
+<body>
+<main>
+  <p class="muted" style="text-align:right"><a href="../support.html">中文</a></p>
+  <h1>Support</h1>
+  <p class="muted">Photo Sprite · Questions or problems? Open an issue on <a href="https://github.com/qiwihui/PhotoSprite/issues">GitHub Issues</a>; we usually reply within 2 business days.</p>
+
+  <h2>Getting started</h2>
+  <ol>
+    <li><strong>Home</strong>: suggestions are ready when you open the app (similar photos, QR code screenshots, old screenshots, blurry shots, large videos, monthly best and trip albums), all analyzed on your iPhone, for free.</li>
+    <li><strong>Review</strong>: tap a suggestion to see the photos, deselect the ones to keep, then delete or save to an album.</li>
+    <li><strong>Assistant</strong>: tap the round button at the bottom right. After signing in or entering your own API key in Settings, describe what you want in a sentence, like "Where did I travel this year? Make an album of the 10 best photos from each place."</li>
+  </ol>
+  <p>The in-app Guide (the question mark at the bottom left) has more examples you can try with one tap.</p>
+
+  <h2>FAQ</h2>
+  <details><summary>How do I use voice?</summary><p>In the Assistant, tap the mic and speak; a 2-second pause sends it, and the reply is read to you. It uses iOS's built-in speech recognition (the same as keyboard dictation), with nothing to download: on your iPhone where supported, otherwise transcribed by Apple. The app never saves or uploads recordings. The first time, it asks for microphone and speech recognition permission. Adjust it in Settings › Voice; with Conversation Mode on, it listens again after each reply and stops after 8 seconds of silence.</p></details>
+  <details><summary>What if I delete something by mistake?</summary><p>Deleted photos stay in Albums › Recently Deleted in the Photos app for 30 days and can be recovered.</p></details>
+  <details><summary>Are my photos uploaded?</summary><p>No. The analysis happens on your iPhone. Only when you use the Assistant are messages and photo statistics sent to the AI provider you chose; see the <a href="privacy.html">Privacy Policy</a>.</p></details>
+  <details><summary>Why does the first analysis take a while?</summary><p>Every photo is analyzed for quality, faces, content and text. A few thousand photos can take over ten minutes; you can use the app meanwhile, and it continues in the background while charging.</p></details>
+  <details><summary>The app only sees some of my photos?</summary><p>If you chose Limited Access, suggestions only cover the photos you allowed. Tap "Select More Photos" at the top of the home screen, or switch to Full Access in Settings › Privacy & Security › Photos.</p></details>
+  <details><summary>How much does the Assistant cost? Where do I get an API key?</summary><p>Providers bill you directly by usage. The app defaults to an inexpensive small model; a typical request costs a cent or less. Create API keys at platform.claude.com (Anthropic), platform.openai.com/api-keys (OpenAI), aistudio.google.com/apikey (Google), openrouter.ai/keys or platform.deepseek.com/api_keys.</p></details>
+  <details><summary>Can I use the Assistant for free?</summary><p>Yes, with OpenRouter's official free models: in Settings choose OpenRouter, tap "Sign in with OpenRouter" (signing up is free; you can also paste your own key), then tap "Use Free Model". Limits are 20 requests per minute and 50 per day (1,000 per day after $10 in total credits); some free models' providers may store or train on your messages, depending on your OpenRouter privacy settings.</p></details>
+  <details><summary>Can I sign in with a subscription?</summary><p>Yes, with ChatGPT, GitHub Copilot, SuperGrok / X Premium, Kimi Code or Meta; requests count against your subscription. You can also sign in with OpenRouter. Claude Pro/Max is not supported: Anthropic allows subscription sign-in only in Claude's own apps and Claude Code. For Claude, enter an Anthropic API key or use it through OpenRouter.</p></details>
+  <details><summary>A photo keeps being suggested for deletion?</summary><p>Deselect it in the review before applying, and suggestions of that kind won't include it again.</p></details>
+
+  <h2>Feedback</h2>
+  <p>Questions, screenshots and ideas are welcome on <a href="https://github.com/qiwihui/PhotoSprite/issues">GitHub Issues</a>. Please include your iOS version and the app version (Settings › About).</p>
+  <p class="muted"><a href="privacy.html">Privacy Policy</a></p>
+</main>
+</body>
+</html>
