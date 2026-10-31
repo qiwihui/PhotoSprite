@@ -31,6 +31,7 @@ h1{font-size:clamp(34px,6vw,56px);line-height:1.15;margin:0 0 14px;letter-spacin
 .lead{color:var(--muted);font-size:clamp(17px,2.2vw,20px);max-width:640px;margin:0 auto 28px}
 .cta{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);padding:14px 26px;border-radius:999px;font-weight:600}
 .cta:hover{text-decoration:none;opacity:.9}
+.cta:focus-visible,.nav a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 .note{color:var(--muted);font-size:14px;margin-top:12px}
 .shots{display:flex;gap:18px;overflow-x:auto;padding:30px 4px 40px;scroll-snap-type:x mandatory}
 .shots img{height:min(560px,70vh);border-radius:22px;box-shadow:0 14px 34px rgba(60,50,20,.16);scroll-snap-align:center;flex:none}
@@ -47,7 +48,25 @@ section.row ul{color:var(--muted);padding-left:20px;margin:0}
 .privacy{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;margin:60px 0}
 .privacy h2{margin-top:0}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-@media (max-width:900px){.features{grid-template-columns:repeat(2,1fr)}}@media (max-width:520px){.features{grid-template-columns:1fr}}@media (max-width:760px){section.row{grid-template-columns:1fr;gap:20px;margin:48px 0}section.row.rev img{order:0}.nav nav{gap:12px;font-size:14px}}
+@media (max-width:900px){.features{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){section.row{grid-template-columns:1fr;gap:20px;margin:48px 0}section.row.rev img{order:0}.nav nav{gap:12px;font-size:14px}}
+@media (max-width:600px){
+  .wrap{padding:0 18px}
+  header.nav{align-items:stretch;flex-direction:column;gap:12px;padding:16px 0}
+  .nav nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;text-align:center}
+  .nav nav a{display:grid;place-items:center;min-height:44px;line-height:1.25;font-size:13px}
+  .hero{padding:32px 0 14px}
+  .hero .icon{width:88px;height:88px;border-radius:21px}
+  .lead{font-size:17px;line-height:1.55}
+  .cta{min-height:48px;justify-content:center}
+  .shots{margin:0 -18px;padding:18px 18px 30px;gap:12px;scroll-padding-inline:18px}
+  .shots img{height:min(420px,58vh);border-radius:17px}
+  .features{grid-template-columns:1fr;gap:12px;margin:10px 0 40px}
+  .f{padding:18px}
+  section.row img{max-width:min(100%,320px)}
+  .privacy{padding:22px;margin:44px 0}
+}
+@media (max-width:360px){.nav nav a{font-size:12px}.wrap{padding:0 14px}.shots{margin:0 -14px;padding-inline:14px}}
 </style>
 </head>
 <body>
@@ -58,7 +77,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);f
 <nav><a href="#features">Features</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="../">中文</a></nav></header>
 <div class="hero"><img class="icon" src="../assets/icon.png" alt="Photo Sprite">
 <div class="kicker">iPhone photo cleanup</div><h1>More photos,<br>less space?</h1><p class="lead">Photo Sprite shows you at a glance what to delete and what to keep: similar shots, expired QR code screenshots, blurry photos and large videos — and builds albums from a single sentence. Everything is analyzed on your iPhone; photos are never uploaded.</p>
-<span class="cta"> Coming soon to the App Store</span><div class="note">In App Store review · Requires iOS 26 or later · English / 简体中文</div></div>
+<a class="cta" href="https://apps.apple.com/us/app/photo-sprite/id6821415986" aria-label="Download Photo Sprite on the App Store">Download on the App Store</a><div class="note">Requires iOS 26 or later · English / 简体中文</div></div>
 <div class="shots"><img src="../assets/en-1.jpg" alt="Cleanup suggestions on the home screen" loading="lazy"><img src="../assets/en-2.jpg" alt="Reviewing similar photos" loading="lazy"><img src="../assets/en-3.jpg" alt="Albums in a sentence" loading="lazy"><img src="../assets/en-4.jpg" alt="Privacy first" loading="lazy"></div>
 <div id="features" class="features"><div class="f"><div class="i" style="background:#d8f3f3">🧹</div><h3>Suggestions right away</h3><p>Similar shots, QR screenshots, old screenshots, blurry photos and large videos, sorted by space to free.</p></div><div class="f"><div class="i" style="background:#fde8d6">👀</div><h3>See before you delete</h3><p>View any photo full screen or delete it on its own; iOS asks once more, with 30 days to undo.</p></div><div class="f"><div class="i" style="background:#e3e6ff">💬</div><h3>Just tell the assistant</h3><p>Type or speak; it finds photos and proposes changes for you to confirm.</p></div><div class="f"><div class="i" style="background:#e6f4e3">🔒</div><h3>Never uploaded</h3><p>Quality, faces, content, text and QR codes are recognized on device. No sign-up, ads or analytics.</p></div></div>
 <section class="row"><div><div class="kicker">On-device suggestions</div><h2>Cleanup ideas the moment you open it</h2><p>Your library is analyzed photo by photo on your iPhone the first time, then only new photos. Suggestions are grouped by kind; tap one to see the photos.</p><ul><li>Similar photos: the best of each group recommended to keep — for people, eyes open and a clear face</li><li>QR code screenshots: used tickets, boarding passes and payment codes, cleared after a week</li><li>Old screenshots: older than 30 days, searchable by the text in them</li><li>Blurry or bad shots, and large videos</li><li>Monthly best and trip albums, picked for you</li></ul></div><img src="../assets/en-1.jpg" alt="Cleanup ideas the moment you open it" loading="lazy"></section><section class="row rev"><div><div class="kicker">Review first</div><h2>You see everything before it’s deleted</h2><p>Every suggestion lists the photos first: tap to view full screen, swipe between them, play videos. Deselect anything you want to keep.</p><ul><li>Every unselected photo is marked Keep; the recommended one has a ★</li><li>iOS confirms once more, and deleted photos stay in Recently Deleted for 30 days</li><li>Photos you keep are never suggested for deletion again</li></ul></div><img src="../assets/en-2.jpg" alt="You see everything before it’s deleted" loading="lazy"></section><section class="row"><div><div class="kicker">AI assistant (optional)</div><h2>Albums in a sentence</h2><p>“Where did I travel this year? Make an album of the 10 best photos from each place.” “I took a screenshot of a Wi-Fi password, find it for me.” The assistant finds photos using what was analyzed on your device and turns albums and deletions into cards for you to confirm.</p><ul><li>Voice input, replies read aloud, and conversation mode for back-and-forth</li><li>Your own API key (Anthropic, OpenAI, Google Gemini, OpenRouter, DeepSeek), or sign in with a ChatGPT, GitHub Copilot or other subscription, or an OpenRouter account</li><li>An inexpensive small model by default, with the cost of every request shown; OpenRouter’s free models work too</li><li>Pick up any earlier chat from the history</li></ul></div><img src="../assets/en-3.jpg" alt="Albums in a sentence" loading="lazy"></section>
